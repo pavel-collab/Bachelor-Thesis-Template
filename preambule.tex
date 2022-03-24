@@ -1,0 +1,67 @@
+%%% Работа с русским языком
+\usepackage{cmap}			 % поиск в PDF
+\usepackage{mathtext} 		 % русские буквы в формулах
+\usepackage[T2A]{fontenc}	 % кодировка
+\usepackage[utf8]{inputenc}	 % кодировка исходного текста
+\usepackage[russian]{babel}	 % локализация и переносы
+
+%%% Пакеты для работы с математикой
+\usepackage{amsmath,amsfonts,amssymb,amsthm,mathtools}
+\usepackage{icomma}
+
+%% Номера формул
+%\mathtoolsset{showonlyrefs=true} % Показывать номера только у тех формул, на которые есть \eqref{} в тексте.
+%\usepackage{leqno}               % Немуреация формул слева
+
+%% Шрифты
+\usepackage{euscript}	 % Шрифт Евклид
+\usepackage{mathrsfs}    % Красивый матшрифт
+
+%% Поля (геометрия страницы)
+\usepackage[left=3cm,right=2cm,top=2cm,bottom=2cm,bindingoffset=0cm]{geometry}
+
+%% Русские списки
+\usepackage{enumitem}
+\makeatletter
+\AddEnumerateCounter{\asbuk}{\russian@alph}{щ}
+\makeatother
+
+%%% Работа с картинками
+\usepackage{caption}
+\captionsetup{justification=centering} % центрирование подписей к картинкам
+\usepackage{graphicx}                  % Для вставки рисунков
+\graphicspath{{images/}{images2/}}     % папки с картинками
+\setlength\fboxsep{3pt}                % Отступ рамки \fbox{} от рисунка
+\setlength\fboxrule{1pt}               % Толщина линий рамки \fbox{}
+\usepackage{wrapfig}                   % Обтекание рисунков и таблиц текстом
+
+%%% Работа с таблицами
+\usepackage{array,tabularx,tabulary,booktabs} % Дополнительная работа с таблицами
+\usepackage{longtable}                        % Длинные таблицы
+\usepackage{multirow}                         % Слияние строк в таблице
+
+%% Красная строка
+\setlength{\parindent}{2em}
+
+%% Интервалы
+\linespread{1}
+\usepackage{multirow}
+
+%% TikZ
+\usepackage{tikz}
+\usetikzlibrary{graphs,graphs.standard}
+
+%% Верхний колонтитул
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+%% Перенос знаков в формулах (по Львовскому)
+\newcommand*{\hm}[1]{#1\nobreak\discretionary{}{\hbox{$\mathsurround=0pt #1$}}{}}
+
+%% дополнения
+\usepackage{float}   % Добавляет возможность работы с командой [H] которая улучшает расположение на странице
+\usepackage{gensymb} % Красивые градусы
+\usepackage{caption} % Пакет для подписей к рисункам, в частности, для работы caption*
+
+% подключаем hyperref (для ссылок внутри  pdf)
+\usepackage[unicode, pdftex]{hyperref}

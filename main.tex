@@ -1,0 +1,36 @@
+\documentclass[a4paper, 12pt]{article}
+
+%% при использовании класса book неравномерность полей чередуется,
+%% при использовании article -- нет
+
+\bibliographystyle{gost71u}  
+
+\input{preambule.tex}
+
+\begin{document}
+    \input{title.tex}
+    \input{Annotation.tex}
+    \newpage
+    \tableofcontents{} %содержание
+    \newpage
+
+    \input{Chapter0.tex}
+    \newpage
+    \input{Chapter1.tex}
+    \newpage
+    \input{Chapter2.tex}
+    \newpage
+    \input{Chapter3.tex}
+    \newpage
+    \input{Chapter4.tex}
+    \newpage
+    \input{Chapter5.tex}
+    \newpage
+
+    %% Don't change the following lines
+    \nocite{*}
+    \bibliography{references}
+
+    % \newpage
+    % \input{Appendix.tex}
+\end{document}
