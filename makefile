@@ -2,4 +2,6 @@ all:
 	pdflatex main.tex
 	bibtex main
 	pdflatex main.tex
-	./clean.sh
+
+clean:
+	rm *.aux *.fdb_latexmk *.fls *.out *.gz *.log *.bbl *.blg *.toc
