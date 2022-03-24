@@ -1,31 +1,27 @@
 \documentclass[a4paper, 12pt]{article}
 
 %% при использовании класса book неравномерность полей чередуется,
-%% при использовании article -- нет
+%% при использовании article -- нет 
 
-\bibliographystyle{gost71u}  
+%% подключаем стандарт библиографии
+\bibliographystyle{gost71u} 
 
-\input{preambule.tex}
+\input{include/preambule.tex}
 
 \begin{document}
-    \input{title.tex}
-    \input{Annotation.tex}
-    \newpage
+    %% титульник
+    \input{include/title.tex}
+    %% аннотоция
+    \input{parts/Annotation.tex}
     \tableofcontents{} %содержание
     \newpage
 
-    \input{Chapter0.tex}
-    \newpage
-    \input{Chapter1.tex}
-    \newpage
-    \input{Chapter2.tex}
-    \newpage
-    \input{Chapter3.tex}
-    \newpage
-    \input{Chapter4.tex}
-    \newpage
-    \input{Chapter5.tex}
-    \newpage
+    \input{parts/Chapter0.tex}
+    \input{parts/Chapter1.tex}
+    \input{parts/Chapter2.tex}
+    \input{parts/Chapter3.tex}
+    \input{parts/Chapter4.tex}
+    \input{parts/Chapter5.tex}
 
     %% Don't change the following lines
     \nocite{*}
