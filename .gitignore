@@ -6,3 +6,6 @@
 *.gz
 *.vscode
 *.swp
+*.bbl
+*.toc
+*.blg

@@ -1,10 +1,14 @@
-\documentclass[a4paper, 12pt]{article}
+\documentclass[a4paper, 12pt]{book}
 
 %% при использовании класса book неравномерность полей чередуется,
 %% при использовании article -- нет 
 
 %% подключаем стандарт библиографии
 \bibliographystyle{gost71u} 
+
+%% for envirovemt "abstract" in class book
+\newenvironment{abstract}{}{}
+\usepackage{abstract}
 
 \input{include/preambule.tex}
 
