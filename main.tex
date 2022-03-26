@@ -1,8 +1,5 @@
 \documentclass[a4paper, 12pt]{book}
 
-%% при использовании класса book неравномерность полей чередуется,
-%% при использовании article -- нет 
-
 %% подключаем стандарт библиографии
 \bibliographystyle{gost71u} 
 
@@ -10,6 +7,7 @@
 \newenvironment{abstract}{}{}
 \usepackage{abstract}
 
+%% подключаем преамбулу, в ней содержатся подключение всех необходимых пакетов
 \input{include/preambule.tex}
 
 \begin{document}
@@ -17,20 +15,22 @@
     \input{include/title.tex}
     %% аннотоция
     \input{parts/Annotation.tex}
-    \tableofcontents{} %содержание
+    %содержание
+    \tableofcontents{}
     \newpage
 
-    \input{parts/Chapter0.tex}
-    \input{parts/Chapter1.tex}
-    \input{parts/Chapter2.tex}
-    \input{parts/Chapter3.tex}
-    \input{parts/Chapter4.tex}
-    \input{parts/Chapter5.tex}
+    \input{parts/Chapter0.tex} %% Введение
+    \input{parts/Chapter1.tex} %% Постановка задачи
+    \input{parts/Chapter2.tex} %% Обзор существующих решений
+    \input{parts/Chapter3.tex} %% Исследование и построение решения задачи
+    \input{parts/Chapter4.tex} %% Описание практической части
+    \input{parts/Chapter5.tex} %% Заключение
 
     %% Don't change the following lines
     \nocite{*}
     \bibliography{references}
 
+    %% в зависимости от надобности подключаем раздел "Приложениие"
     % \newpage
     % \input{Appendix.tex}
 \end{document}
