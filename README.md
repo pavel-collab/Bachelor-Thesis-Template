@@ -103,3 +103,62 @@ make clean
 - _gost71u.bst_ -- файл, содержащий настройки ГОСТа для оформления библиографии
 - _LICENSE_ -- лицензия
 - _makefile_ -- файл, содержащий инструкции сборки
+
+## Некоторые примеры работы с формулами, таблицами, изображениями и др.
+
+### Вставка формулы
+
+Традиционно математические формулы пишутся в окружении ```\begin{equation} ... \end{equation}```.
+```
+\begin{equation}
+    \Phi(x) = \frac{1}{\sqrt{2} \pi} \int_0^x e^{- \frac{t^2}{2}} dz
+\end{equation}
+```
+
+Больше информации про написание математических выражений в Latex вы можете найти [здесь](https://www.overleaf.com/learn/latex/Mathematical_expressions).
+
+### Вставка изображения
+
+Для того, чтобы вставить в документ изображение, поместите его в папку __images__, после этого в нужном месте кода вставьте конструкцию
+```
+\begin{figure}
+    \centering
+    \includegraphics[scale=1]{image_name.png}
+    \caption{Подпись}
+\end{figure}
+```
+Параметр _scale_ настраивает относительный размер вашего изображения в документе. В строке _\caption_ вставляется подпись к вашему изображению.
+
+Больше информации про вставку изображений вы можете прочитать [здесь](https://ru.overleaf.com/learn/latex/Inserting_Images).
+
+### Вставка таблицы
+
+Для вставки таблицы в документ используется следующая конструкция
+```
+\begin{table}[]
+    \centering
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        a  & b  & c  & d  \\ \hline
+        1  & 2  & 3  & 4  \\ \hline
+        10 & 20 & 30 & 40 \\ \hline
+    \end{tabular}
+\end{table}
+```
+Для быстрой генерации таблиц в Latex удобно использовать сайт [Tables Generator](https://www.tablesgenerator.com/). Больше информации по написанию таблиц в Latex вы можете найти [здесь](https://www.overleaf.com/learn/latex/Tables).
+
+### Вставка исодного кода
+
+Для оформления листингов с исходным кодом используется окружение ```\begin{verbatim} ... \end{verbatim}```
+
+```
+\begin{verbatim}
+    #include <iostream>
+
+    int main()
+    {
+        std::cout << "hello, world!" << std::endl;
+        return 0;
+    }
+\end{verbatim}
+```
