@@ -17,7 +17,7 @@ sudo apt-get install texlive-latex-extra
 git clone https://github.com/pavel-collab/Bachelor-Thesis-Template.git
 ```
 
-Для сборки проекта в корневом каталоге лежит makefile.
+Для сборки проекта в корневом каталоге лежит Makefile.
 Чтобы запустить автоматическую сборку в рабочей директории неободимо выполнить команду
 ```
 make
