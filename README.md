@@ -149,10 +149,10 @@ make clean
 
 ### Вставка исходного кода
 
-Для оформления листингов с исходным кодом используется окружение ```\begin{verbatim} ... \end{verbatim}```
+Для оформления листингов с исходным кодом используется окружение ```\begin{lstlisting} ... \end{lstlisting}```
 
 ```
-\begin{verbatim}
+\begin{lstlisting}
     #include <iostream>
 
     int main()
@@ -160,7 +160,7 @@ make clean
         std::cout << "hello, world!" << std::endl;
         return 0;
     }
-\end{verbatim}
+\end{lstlisting}
 ```
 
 ### Благодарности
