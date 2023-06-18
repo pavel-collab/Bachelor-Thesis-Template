@@ -2,12 +2,12 @@
 
 При разработке сборка проекта производилась на OS Linux Ubuntu.
 
-Для сборки проекта необходимо установить следующие пакеты:
+Для сборки проекта необходимы следующие пакеты:
 ```
-sudo apt-get install texlive-latex-base
-sudo apt-get install texlive-fonts-recommended
-sudo apt-get install texlive-fonts-extra
-sudo apt-get install texlive-latex-extra
+texlive-latex-base
+texlive-fonts-recommended
+texlive-fonts-extra
+texlive-latex-extra
 ```
 
 ## Инструкция по сборке
@@ -15,6 +15,11 @@ sudo apt-get install texlive-latex-extra
 Скопируйте проект в рабочую директорию вашего ПК, используя команду
 ```
 git clone https://github.com/pavel-collab/Bachelor-Thesis-Template.git
+```
+
+Запустите скрипт, устанваливающий необходимые зависимости
+```
+sudo ./configure.sh
 ```
 
 Для сборки проекта в корневом каталоге лежит Makefile.
