@@ -1,13 +1,13 @@
 \documentclass[a4paper, openany, 12pt]{book}
 
 %% подключаем стандарт библиографии
-\bibliographystyle{gost71u} 
+\bibliographystyle{gost71u}
 
-%% for envirovemt "abstract" in class book
+%% для "Abstract" в классе book
 \newenvironment{abstract}{}{}
 \usepackage{abstract}
 
-%% подключаем преамбулу, в ней содержатся подключение всех необходимых пакетов
+%% подключаем преамбулу: в ней содержится подключение всех необходимых пакетов
 \input{include/preambule.tex}
 
 \begin{document}
@@ -15,7 +15,7 @@
     \input{include/title.tex}
     %% аннотоция
     \input{parts/Annotation.tex}
-    %содержание
+    %% содержание
     \tableofcontents{}
     \newpage
 
@@ -26,11 +26,11 @@
     \input{parts/Chapter4.tex} %% Описание практической части
     \input{parts/Chapter5.tex} %% Заключение
 
-    %% Don't change the following lines
+    %% НЕ ТРОГАЙТЕ!!!
     \nocite{*}
     \bibliography{references}
 
-    %% в зависимости от надобности подключаем раздел "Приложениие"
+    %% в зависимости от надобности подключаем раздел "Приложение"
     % \newpage
     % \input{Appendix.tex}
 \end{document}
