@@ -17,6 +17,19 @@
 \usepackage{euscript}	 % шрифт "Евклид"
 \usepackage{mathrsfs}    % красивый мат. шрифт
 
+%% Некоторые полезные макросы для дебага (в случае недоверия авторам шаблона)
+\makeatletter
+\newcommand\thefontsize{The current font size is: \f@size pt} % пример: \section{\thefontsize}
+\makeatother
+
+%% Настройка размеров шрифтов
+\makeatletter
+\renewcommand\Huge{\@setfontsize\Huge{14pt}{1.5}}
+\renewcommand\huge{\@setfontsize\huge{14pt}{1.5}}
+\renewcommand\Large{\@setfontsize\Large{14pt}{1.5}}
+\renewcommand\large{\@setfontsize\large{12pt}{1.5}}
+\makeatother
+
 %% Поля (геометрия страницы)
 \usepackage[left=3cm,right=1.5cm,top=2cm,bottom=2cm,bindingoffset=0cm]{geometry}
 
