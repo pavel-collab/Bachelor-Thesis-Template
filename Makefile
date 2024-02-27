@@ -1,7 +1,13 @@
-all:
-	pdflatex main.tex
-	bibtex main
-	pdflatex main.tex
+
+PDFS = main.pdf
+
+.PHONY: all clean
+
+all: main.pdf
+
+%.pdf: %.tex
+	latexrun/latexrun $*
 
 clean:
-	rm *.aux *.fdb_latexmk *.fls *.out *.gz *.log *.bbl *.blg *.toc
+	latexrun/latexrun --clean-all
+	-rm -f $(PDFS)
