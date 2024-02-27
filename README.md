@@ -27,6 +27,14 @@ git clone git@github.com:pavel-collab/Bachelor-Thesis-Template.git
 sudo ./configure.sh
 ```
 
+Мы используем утилиту `latexrun` для более информативных сообщений сборки. Для этого
+необходимо подгрузить его как git-овский submodule:
+
+```bash
+git submodule init
+git submodule update
+```
+
 Для сборки проекта в корневом каталоге лежит Makefile.
 Чтобы запустить автоматическую сборку в рабочей директории необходимо выполнить
 команду
