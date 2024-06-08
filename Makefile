@@ -5,9 +5,17 @@ PDFS = main.pdf
 
 all: main.pdf
 
-%.pdf: %.tex
+INCLUDES = include/*.tex
+
+PARTS = parts/*.tex
+
+MAIN = main.tex
+
+%.pdf: $(MAIN) $(PARTS) $(INCLUDES)
 	latexrun/latexrun $*
 
 clean:
+# this is a bad practice, of course, but it's enough for our purposes
+	cp main.pdf tmp_makefile_main.pdf
 	latexrun/latexrun --clean-all
-	-rm -f $(PDFS)
+	mv tmp_makefile_main.pdf main.pdf
